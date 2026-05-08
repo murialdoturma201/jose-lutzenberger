@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="José Lutzenberger - Ambientalista gaúcho, fundador da AGAPAN e ganhador do Prêmio Nobel Alternativo. Projeto escolar da Turma 201 do Colégio Murialdo.">
+    <meta name="keywords" content="José Lutzenberger, ambientalista, AGAPAN, ecologia, Rio Grande do Sul, meio ambiente, Colégio Murialdo">
+    <meta name="author" content="Turma 201 - Colégio Murialdo">
+    
+    <title>José Lutzenberger | O Guardião da Natureza</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>JL</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/articles.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-text">JL</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Início</a></li>
+                <li><a href="#biografia" class="nav-link" data-section="biografia">Biografia</a></li>
+                <li><a href="#conquistas" class="nav-link" data-section="conquistas">Conquistas</a></li>
+                <li><a href="#legado" class="nav-link" data-section="legado">Legado</a></li>
+                <li><a href="#artigos" class="nav-link" data-section="artigos">Artigos</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu de navegação">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-bg">
+                <div class="hero-gradient"></div>
+                <canvas class="hero-canvas" id="heroCanvas"></canvas>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <span class="hero-tag">1926 - 2002</span>
+                    
+                    <h1 class="hero-title">
+                        <span class="text-line">
+                            <span class="text-mask">José</span>
+                        </span>
+                        <span class="text-line">
+                            <span class="text-mask">Lutzenberger</span>
+                        </span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">O gaúcho que ouviu a voz da Terra e lutou pela Amazônia antes de todos</p>
+                    
+                    <div class="hero-cta">
+                        <a href="#biografia" class="cta-button">
+                            <span>Explorar legado</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="hero-turma">
+                        <span class="turma-line"></span>
+                        <span class="turma-text">Turma 201 - Colégio Murialdo</span>
+                        <span class="turma-line"></span>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <div class="card-inner">
+                            <div class="card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 21H21M3 21V16M3 21L9 12M21 21V16M21 21L15 12M9 12L12 8L15 12M9 12V16M15 12V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="card-info">
+                                <span class="card-number">1971</span>
+                                <span class="card-text">Fundação da AGAPAN</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-card card-2">
+                        <div class="card-inner">
+                            <div class="card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M5.3 18.6C6.8 16.2 9.2 14.6 12 14.6C14.8 14.6 17.2 16.2 18.7 18.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="card-info">
+                                <span class="card-number">1987</span>
+                                <span class="card-text">Right Livelihood Award</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span class="scroll-text">Role para descobrir</span>
+                <div class="scroll-line">
+                    <div class="scroll-dot"></div>
+                </div>
+            </div>
+
+            <div class="hero-bottom-decoration">
+                <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+                    <path d="M0 120L60 105C120 90 240 60 360 52.5C480 45 600 60 720 67.5C840 75 960 75 1080 60C1200 45 1320 15 1380 0H1440V120H0Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </section>
+
+        <section id="biografia" class="biography-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Biografia</span>
+                    <h2 class="section-title">A jornada de um visionário</h2>
+                    <p class="section-description">De Porto Alegre para o mundo, a história de quem dedicou sua existência à natureza</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1926</div>
+                            <h3>Nascimento em Porto Alegre</h3>
+                            <p>José Lutzenberger nasce em 17 de dezembro, filho de imigrantes alemães. Desde cedo, demonstra uma conexão especial com a natureza, explorando os campos e matas do Rio Grande do Sul.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1950</div>
+                            <h3>Formação em Agronomia</h3>
+                            <p>Forma-se pela Universidade Federal do Rio Grande do Sul (UFRGS), onde começa a desenvolver seu pensamento crítico sobre agricultura convencional e impacto ambiental.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1957 - 1970</div>
+                            <h3>Experiência Internacional</h3>
+                            <p>Trabalha na BASF como técnico agrícola na Europa e África. Testemunha os impactos devastadores dos agrotóxicos e da agricultura intensiva, o que transforma radicalmente sua visão de mundo.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1971</div>
+                            <h3>Fundação da AGAPAN</h3>
+                            <p>Cria a Associação Gaúcha de Proteção ao Ambiente Natural, primeira ONG ambientalista do Brasil e uma das pioneiras na América Latina, iniciando o movimento ecológico no país.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1987</div>
+                            <h3>Right Livelihood Award</h3>
+                            <p>Recebe o "Prêmio Nobel Alternativo" em Estocolmo, Suécia, por sua contribuição excepcional à proteção do meio ambiente e aos direitos humanos.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1990 - 1992</div>
+                            <h3>Ministro do Meio Ambiente</h3>
+                            <p>Assume a Secretaria Especial do Meio Ambiente no governo Collor, tornando-se o primeiro ambientalista reconhecido a ocupar tal cargo no Brasil.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2002</div>
+                            <h3>Legado Eterno</h3>
+                            <p>Falece aos 75 anos, deixando um legado inestimável que continua inspirando ambientalistas e defensores da natureza em todo o mundo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conquistas" class="achievements-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Conquistas</span>
+                    <h2 class="section-title">Honrarias e Prêmios</h2>
+                    <p class="section-description">Reconhecimento mundial por uma vida dedicada à causa ambiental</p>
+                </div>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card" data-index="0">
+                        <div class="achievement-glow"></div>
+                        <div class="achievement-content">
+                            <div class="achievement-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Right Livelihood Award</h3>
+                            <p class="achievement-year">1987</p>
+                            <p>Conhecido como "Prêmio Nobel Alternativo", concedido em Estocolmo por sua luta incansável pela preservação ambiental e justiça social.</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card" data-index="1">
+                        <div class="achievement-glow"></div>
+                        <div class="achievement-content">
+                            <div class="achievement-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M2 12H22" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 21 12 21C12 21 19 14.25 19 9C19 5.13 15.87 2 12 2Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Global 500 - ONU</h3>
+                            <p class="achievement-year">1988</p>
+                            <p>Reconhecimento do Programa das Nações Unidas para o Meio Ambiente por contribuições excepcionais à proteção ambiental mundial.</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card" data-index="2">
+                        <div class="achievement-glow"></div>
+                        <div class="achievement-content">
+                            <div class="achievement-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Grã-Cruz da Ordem do Mérito</h3>
+                            <p class="achievement-year">1991</p>
+                            <p>Honraria máxima concedida pelo governo da Alemanha por serviços relevantes prestados à humanidade e ao meio ambiente.</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card" data-index="3">
+                        <div class="achievement-glow"></div>
+                        <div class="achievement-content">
+                            <div class="achievement-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Fundação Gaia</h3>
+                            <p class="achievement-year">1987</p>
+                            <p>Cria a Fundação Gaia, dedicada à educação ambiental e agricultura sustentável, baseada na Teoria de Gaia de James Lovelock.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="legado" class="legacy-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Legado</span>
+                    <h2 class="section-title">Gaia e a Ética Planetária</h2>
+                    <p class="section-description">O pensamento revolucionário que transformou a luta ambiental no Brasil</p>
+                </div>
+
+                <div class="legacy-content">
+                    <div class="legacy-quote-wrapper">
+                        <div class="legacy-quote">
+                            <div class="quote-mark">"</div>
+                            <blockquote>
+                                <p>Uma ética de respeito pela vida, pela Terra, por Gaia. É preciso entender que somos parte de um todo integrado e que nossas ações têm consequências globais. O futuro da humanidade depende da nossa capacidade de viver em harmonia com a natureza.</p>
+                            </blockquote>
+                            <cite>- José Lutzenberger</cite>
+                        </div>
+                    </div>
+
+                    <div class="legacy-grid">
+                        <div class="legacy-card">
+                            <div class="legacy-card-content">
+                                <div class="legacy-card-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2L14 7L19 8L15 12L16 17L12 15L8 17L9 12L5 8L10 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h3>Agricultura Sustentável</h3>
+                                <p>Defendia práticas agrícolas que respeitassem os ciclos naturais, rejeitando o uso intensivo de agrotóxicos e promovendo a agricultura orgânica como alternativa viável.</p>
+                            </div>
+                            <div class="card-hover-effect"></div>
+                        </div>
+
+                        <div class="legacy-card">
+                            <div class="legacy-card-content">
+                                <div class="legacy-card-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                        <path d="M4 7V17H20V7M4 7L12 2L20 7M4 7L12 12M20 7L12 12M12 12V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h3>Educação Ambiental</h3>
+                                <p>Pioneiro na educação ambiental no Brasil, acreditava que a mudança começa pela compreensão profunda da natureza e pela reconexão do ser humano com o meio ambiente.</p>
+                            </div>
+                            <div class="card-hover-effect"></div>
+                        </div>
+
+                        <div class="legacy-card">
+                            <div class="legacy-card-content">
+                                <div class="legacy-card-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <h3>Ativismo Integral</h3>
+                                <p>Combinava conhecimento científico com ação política e engajamento comunitário para proteger ecossistemas e promover justiça ambiental.</p>
+                            </div>
+                            <div class="card-hover-effect"></div>
+                        </div>
+
+                        <div class="legacy-card">
+                            <div class="legacy-card-content">
+                                <div class="legacy-card-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                                        <ellipse cx="12" cy="12" rx="4" ry="10" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M2 12H22" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
+                                <h3>Visão Planetária</h3>
+                                <p>Influenciado pela Teoria de Gaia, enxergava a Terra como um organismo vivo e autorregulador, onde cada elemento é interdependente e essencial para o equilíbrio do todo.</p>
+                            </div>
+                            <div class="card-hover-effect"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="artigos" class="articles-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Artigos</span>
+                    <h2 class="section-title">Artigos e Pesquisas</h2>
+                    <p class="section-description">Trabalhos desenvolvidos pela Turma 201 do Colégio Murialdo sobre o legado de Lutzenberger</p>
+                </div>
+
+                <div class="articles-grid">
+                    <div class="article-card" data-article="agapan">
+                        <div class="article-card-header">
+                            <span class="article-tag">Grupo 1</span>
+                            <button class="article-expand-btn" aria-label="Expandir artigo">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="article-card-content">
+                            <h3>AGAPAN: A Primeira ONG Ambientalista do Brasil</h3>
+                            <p class="article-preview">A história da Associação Gaúcha de Proteção ao Ambiente Natural e seu papel fundamental no nascimento do movimento ecológico brasileiro.</p>
+                            <div class="article-meta">
+                                <span class="meta-author">Grupo 1 - AGAPAN</span>
+                                <span class="meta-date">Aguardando conteúdo</span>
+                            </div>
+                            <a href="artigos/artigo-agapan.html" class="read-more-link">
+                                <span>Ler artigo completo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card" data-article="rincao-gaia">
+                        <div class="article-card-header">
+                            <span class="article-tag">Grupo 2</span>
+                            <button class="article-expand-btn" aria-label="Expandir artigo">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="article-card-content">
+                            <h3>Rincão Gaia: O Santuário Ecológico de Lutzenberger</h3>
+                            <p class="article-preview">Conheça o refúgio ecológico criado por Lutzenberger no Rio Grande do Sul e sua importância para a educação ambiental e preservação.</p>
+                            <div class="article-meta">
+                                <span class="meta-author">Grupo 2 - Rincão Gaia</span>
+                                <span class="meta-date">Aguardando conteúdo</span>
+                            </div>
+                            <a href="artigos/artigo-rincao-gaia.html" class="read-more-link">
+                                <span>Ler artigo completo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card" data-article="carreira-ambientalista">
+                        <div class="article-card-header">
+                            <span class="article-tag">Grupo 3</span>
+                            <button class="article-expand-btn" aria-label="Expandir artigo">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="article-card-content">
+                            <h3>A Trajetória Ambientalista: Da AGAPAN ao Ministério</h3>
+                            <p class="article-preview">A evolução do pensamento e atuação de Lutzenberger na defesa do meio ambiente, culminando em sua nomeação como Ministro.</p>
+                            <div class="article-meta">
+                                <span class="meta-author">Grupo 3 - Carreira Ambientalista</span>
+                                <span class="meta-date">Aguardando conteúdo</span>
+                            </div>
+                            <a href="artigos/artigo-carreira-ambientalista.html" class="read-more-link">
+                                <span>Ler artigo completo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card" data-article="industria-quimica">
+                        <div class="article-card-header">
+                            <span class="article-tag">Grupo 4</span>
+                            <button class="article-expand-btn" aria-label="Expandir artigo">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="article-card-content">
+                            <h3>Lutzenberger e a Indústria Química: Da BASF ao Ativismo</h3>
+                            <p class="article-preview">A experiência de 13 anos na indústria química que transformou Lutzenberger em um crítico ferrenho dos agrotóxicos e defensor da agricultura sustentável.</p>
+                            <div class="article-meta">
+                                <span class="meta-author">Grupo 4 - Indústria Química</span>
+                                <span class="meta-date">Aguardando conteúdo</span>
+                            </div>
+                            <a href="artigos/artigo-industria-quimica.html" class="read-more-link">
+                                <span>Ler artigo completo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">JL</span>
+                    <p>Projeto escolar em homenagem a José Lutzenberger, um dos maiores ambientalistas da história do Brasil.</p>
+                    <span class="footer-turma">Turma 201 - Colégio Murialdo</span>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#hero">Início</a></li>
+                            <li><a href="#biografia">Biografia</a></li>
+                            <li><a href="#conquistas">Conquistas</a></li>
+                            <li><a href="#legado">Legado</a></li>
+                            <li><a href="#artigos">Artigos</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Grupos</h4>
+                        <ul>
+                            <li><a href="artigos/artigo-agapan.html">Grupo 1 - AGAPAN</a></li>
+                            <li><a href="artigos/artigo-rincao-gaia.html">Grupo 2 - Rincão Gaia</a></li>
+                            <li><a href="artigos/artigo-carreira-ambientalista.html">Grupo 3 - Carreira Ambientalista</a></li>
+                            <li><a href="artigos/artigo-industria-quimica.html">Grupo 4 - Indústria Química</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Turma 201 - Colégio Murialdo. Todos os direitos reservados.</p>
+                <p>Projeto escolar em homenagem ao guardião da natureza.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="article-modal" id="articleModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/articles.js"></script>
+</body>
+</html>

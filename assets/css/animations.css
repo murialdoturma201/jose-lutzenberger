@@ -1,0 +1,186 @@
+[data-animation="fade-left"] {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+}
+
+[data-animation="fade-left"].visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-animation="fade-right"] {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+}
+
+[data-animation="fade-right"].visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-animation="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+}
+
+[data-animation="fade-up"].visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.particle {
+    position: absolute;
+    pointer-events: none;
+    animation: particleDrift linear infinite;
+}
+
+@keyframes particleDrift {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(calc(100px * var(--drift))) rotate(calc(360deg * var(--rotation)));
+        opacity: 0;
+    }
+}
+
+.hero-title .text-line {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    animation: clipReveal 1s var(--ease-out-expo) forwards;
+}
+
+.hero-title .text-line:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+@keyframes clipReveal {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.scroll-indicator .scroll-line {
+    animation: breatheLine 3s ease-in-out infinite;
+}
+
+@keyframes breatheLine {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(196, 169, 106, 0.15);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.7s var(--ease-out-expo), height 0.7s var(--ease-out-expo);
+    z-index: -1;
+}
+
+.cta-button:active::after {
+    width: 350px;
+    height: 350px;
+}
+
+.hamburger-line {
+    transition: transform 0.5s var(--ease-out-expo), opacity 0.4s ease;
+}
+
+.hamburger.active .hamburger-line:first-child {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-line:last-child {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.modal-container {
+    animation: modalSlideUp 0.6s var(--ease-out-expo);
+}
+
+@keyframes modalSlideUp {
+    from { opacity: 0; transform: translateY(50px) scale(0.94); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.article-modal.closing .modal-container {
+    animation: modalSlideDown 0.5s var(--ease-out-expo) forwards;
+}
+
+@keyframes modalSlideDown {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(40px) scale(0.94); }
+}
+
+.modal-overlay {
+    animation: overlayFadeIn 0.5s ease;
+}
+
+@keyframes overlayFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.article-modal.closing .modal-overlay {
+    animation: overlayFadeOut 0.5s ease forwards;
+}
+
+@keyframes overlayFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.quote-mark {
+    animation: quoteMarkBreathe 4s ease-in-out infinite;
+}
+
+@keyframes quoteMarkBreathe {
+    0%, 100% { opacity: 0.04; transform: scale(1); }
+    50% { opacity: 0.1; transform: scale(1.06); }
+}
+
+@keyframes rippleEffect {
+    from { transform: scale(0); opacity: 0.5; }
+    to { transform: scale(2.5); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html { scroll-behavior: auto; }
+    
+    .cursor, .cursor-follower { display: none; }
+    
+    body { cursor: auto; }
+    
+    .hero-title .text-line {
+        clip-path: none;
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

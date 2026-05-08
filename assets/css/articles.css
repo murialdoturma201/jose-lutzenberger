@@ -1,0 +1,399 @@
+.article-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.article-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: var(--color-champagne);
+    opacity: 0;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.article-card:hover::before {
+    width: 85%;
+    opacity: 0.6;
+}
+
+.article-card[data-article="agapan"]:hover {
+    border-color: rgba(107, 127, 93, 0.35);
+}
+
+.article-card[data-article="agapan"]:hover .article-tag {
+    background: rgba(107, 127, 93, 0.12);
+    border-color: rgba(107, 127, 93, 0.3);
+    color: #8a9e7c;
+}
+
+.article-card[data-article="rincao-gaia"]:hover {
+    border-color: rgba(78, 115, 64, 0.35);
+}
+
+.article-card[data-article="rincao-gaia"]:hover .article-tag {
+    background: rgba(78, 115, 64, 0.12);
+    border-color: rgba(78, 115, 64, 0.3);
+    color: #6b9a58;
+}
+
+.article-card[data-article="carreira-ambientalista"]:hover {
+    border-color: rgba(37, 79, 37, 0.35);
+}
+
+.article-card[data-article="carreira-ambientalista"]:hover .article-tag {
+    background: rgba(37, 79, 37, 0.12);
+    border-color: rgba(37, 79, 37, 0.3);
+    color: #4a8c4a;
+}
+
+.article-card[data-article="industria-quimica"]:hover {
+    border-color: rgba(196, 169, 106, 0.35);
+}
+
+.article-card[data-article="industria-quimica"]:hover .article-tag {
+    background: rgba(196, 169, 106, 0.12);
+    border-color: rgba(196, 169, 106, 0.3);
+    color: #d4c084;
+}
+
+.article-expand-btn {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.article-expand-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(196, 169, 106, 0.12);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.article-expand-btn:hover::after {
+    width: 120%;
+    height: 120%;
+}
+
+.article-card-content h3 {
+    transition: color 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.article-card:hover .article-card-content h3 {
+    color: var(--color-champagne);
+    transform: translateX(2px);
+}
+
+.article-preview {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more-link {
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.read-more-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-champagne);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.read-more-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.article-modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.article-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(196, 169, 106, 0.2) transparent;
+    border-radius: 4px;
+}
+
+.modal-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.modal-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+    background: rgba(196, 169, 106, 0.2);
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(196, 169, 106, 0.4);
+}
+
+.modal-content .article-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-champagne);
+    padding: 6px 16px;
+    background: rgba(196, 169, 106, 0.06);
+    border: 1px solid rgba(196, 169, 106, 0.15);
+    margin-bottom: 24px;
+}
+
+.modal-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-pampas);
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+.modal-content .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 26px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(196, 169, 106, 0.08);
+}
+
+.modal-content .article-body {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.modal-content .article-body h2 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--color-pampas);
+    margin: 40px 0 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.modal-content .article-body h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--color-champagne);
+    margin: 30px 0 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.modal-content .article-body p {
+    margin-bottom: 20px;
+    color: var(--color-text-light);
+}
+
+.modal-content .article-body ul,
+.modal-content .article-body ol {
+    margin: 18px 0 18px 28px;
+    color: var(--color-text-light);
+}
+
+.modal-content .article-body li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.modal-content .article-body blockquote {
+    border-left: 2px solid var(--color-champagne);
+    padding: 18px 28px;
+    margin: 30px 0;
+    background: rgba(196, 169, 106, 0.04);
+}
+
+.modal-content .article-body blockquote p {
+    color: var(--color-pampas);
+    font-style: italic;
+    margin-bottom: 0;
+    font-size: 1.05rem;
+}
+
+.modal-content .article-body img {
+    width: 100%;
+    margin: 30px 0;
+    border: 1px solid rgba(196, 169, 106, 0.08);
+}
+
+.modal-content .article-body .highlight-box {
+    background: rgba(196, 169, 106, 0.04);
+    border: 1px solid rgba(196, 169, 106, 0.12);
+    padding: 28px;
+    margin: 30px 0;
+}
+
+.modal-content .article-body .highlight-box h4 {
+    color: var(--color-champagne);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.modal-content .article-body .highlight-box p {
+    color: var(--color-text-light);
+    margin-bottom: 0;
+}
+
+.modal-content .article-body .reference {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    padding: 14px 0;
+    border-top: 1px solid rgba(196, 169, 106, 0.06);
+    margin-top: 35px;
+    font-style: italic;
+}
+
+.article-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.article-loading-spinner {
+    width: 36px;
+    height: 36px;
+    border: 2px solid rgba(196, 169, 106, 0.12);
+    border-top-color: var(--color-champagne);
+    border-radius: 50%;
+    animation: articleSpin 0.8s linear infinite;
+}
+
+@keyframes articleSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.article-loading p {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.article-error {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.article-error-icon {
+    font-size: 0;
+    margin-bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgba(196, 169, 106, 0.3);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-champagne);
+}
+
+.article-error-icon::before {
+    content: '!';
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.article-error h3 {
+    color: var(--color-pampas);
+    margin-bottom: 14px;
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+.article-error p {
+    color: var(--color-text-muted);
+    margin-bottom: 28px;
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+.article-error button {
+    padding: 14px 32px;
+    background: transparent;
+    border: 1px solid var(--color-champagne);
+    color: var(--color-champagne);
+    cursor: pointer;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.article-error button:hover {
+    background: var(--color-champagne);
+    color: var(--color-earth-dark);
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 30px;
+    }
+
+    .modal-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .modal-content .article-body {
+        font-size: 0.9rem;
+    }
+
+    .modal-content .article-body blockquote {
+        padding: 14px 20px;
+    }
+
+    .modal-content .article-body .highlight-box {
+        padding: 20px;
+    }
+
+    .article-preview {
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
+}
