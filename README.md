@@ -14,6 +14,12 @@ Site desenvolvido como projeto escolar pela **Turma 201 do Colégio Murialdo** e
 
 O site apresenta sua biografia, conquistas, legado filosófico e artigos produzidos pelos alunos.
 
+## Acesse o Site
+
+O site está disponível em:
+
+🔗 **[https://seu-usuario.github.io/jose-lutzenberger/](https://seu-usuario.github.io/jose-lutzenberger/)**
+
 ---
 
 ## Tecnologias Utilizadas
