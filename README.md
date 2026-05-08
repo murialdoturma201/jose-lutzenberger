@@ -34,24 +34,25 @@ O site apresenta sua biografia, conquistas, legado filosófico e artigos produzi
 jose-lutzenberger/
 ├── index.html
 ├── README.md
+├── LICENSE
 ├── assets/
-│ ├── css/
-│ │ ├── style.css
-│ │ ├── animations.css
-│ │ └── articles.css
-│ ├── js/
-│ │ ├── main.js
-│ │ ├── animations.js
-│ │ └── articles.js
-│ └── img/
-│ ├── jose-lutzenberger.jpg
-│ ├── joselutz-alagado.jpg
-│ └── joselutz-amazonia.jpg
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── animations.css
+│   │   └── articles.css
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── animations.js
+│   │   └── articles.js
+│   └── img/
+│       ├── jose-lutzenberger.jpg
+│       ├── joselutz-alagado.jpg
+│       └── joselutz-amazonia.jpg
 └── artigos/
-├── artigo-agapan.html
-├── artigo-rincao-gaia.html
-├── artigo-carreira-ambientalista.html
-└── artigo-industria-quimica.html
+    ├── artigo-agapan.html
+    ├── artigo-rincao-gaia.html
+    ├── artigo-carreira-ambientalista.html
+    └── artigo-industria-quimica.html
 
 ---
 
