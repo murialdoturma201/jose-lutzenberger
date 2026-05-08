@@ -29,33 +29,6 @@ O site apresenta sua biografia, conquistas, legado filosófico e artigos produzi
 
 ---
 
-## Estrutura do Projeto
-
-jose-lutzenberger/
-├── index.html
-├── README.md
-├── LICENSE
-├── assets/
-│   ├── css/
-│   │   ├── style.css
-│   │   ├── animations.css
-│   │   └── articles.css
-│   ├── js/
-│   │   ├── main.js
-│   │   ├── animations.js
-│   │   └── articles.js
-│   └── img/
-│       ├── jose-lutzenberger.jpg
-│       ├── joselutz-alagado.jpg
-│       └── joselutz-amazonia.jpg
-└── artigos/
-    ├── artigo-agapan.html
-    ├── artigo-rincao-gaia.html
-    ├── artigo-carreira-ambientalista.html
-    └── artigo-industria-quimica.html
-
----
-
 ## Funcionalidades
 
 - Animações suaves de entrada (hero, cards, timeline)
@@ -77,7 +50,6 @@ git clone https://github.com/seu-usuario/jose-lutzenberger.git
 ```
 
 2. Abra o arquivo `index.html` em qualquer navegador
-
 3.Ou use Live Server no VS Code para desenvolvimento
 
 ## Créditos
