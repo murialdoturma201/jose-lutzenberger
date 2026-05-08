@@ -18,7 +18,7 @@ O site apresenta sua biografia, conquistas, legado filosófico e artigos produzi
 
 O site está disponível em:
 
-🔗 **[https://seu-usuario.github.io/jose-lutzenberger/](https://seu-usuario.github.io/jose-lutzenberger/)**
+🔗 **[https://turma201/joselutzenberger](https://bit.ly/4d15QNm)**
 
 ---
 
