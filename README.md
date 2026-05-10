@@ -64,5 +64,5 @@ git clone https://github.com/seu-usuario/jose-lutzenberger.git
 | Função | Responsável |
 |--------|-------------|
 | Desenvolvimento Web | [terra47](https://github.com/terra47) |
-| Conteúdo e Pesquisa | Turma 201 — Colégio Murialdo |
+| Conteúdo e Pesquisa | Turma 201 - Colégio Murialdo |
 | Homenageado | José Lutzenberger (1926–2002) |
