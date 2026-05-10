@@ -245,7 +245,6 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translateY(-6.5px) rotate(-45deg);
 }
 
-/* FORÇAR VISIBILIDADE DO HERO - DEBUG */
 .hero .hero-tag,
 .hero .hero-title,
 .hero .hero-subtitle,
@@ -341,7 +340,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .text-line {
     display: block;
-    /* overflow: hidden; */
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 

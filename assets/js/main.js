@@ -116,6 +116,25 @@ function initModal() {
     const modalOverlay = modal?.querySelector('.modal-overlay');
     if (!modal || !modalContent) return;
 
+    function openModal(content) {
+        modalContent.innerHTML = content;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        modalContent.scrollTop = 0;
+        
+        if (window.lenis) window.lenis.stop();
+        
+        gsap.fromTo('.modal-container', 
+            { opacity: 0, y: 50, scale: 0.94 },
+            { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'power3.out' }
+        );
+        
+        gsap.fromTo('.modal-overlay',
+            { opacity: 0 },
+            { opacity: 1, duration: 0.5, ease: 'power2.out' }
+        );
+    }
+
     function closeModal() {
         gsap.timeline({
             onComplete: () => {
@@ -136,5 +155,14 @@ function initModal() {
         if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
     });
 
+    modal.addEventListener('wheel', (e) => {
+        e.stopPropagation();
+    }, { passive: false });
+
+    modal.addEventListener('touchmove', (e) => {
+        e.stopPropagation();
+    }, { passive: false });
+
+    window.openArticleModal = openModal;
     window.closeArticleModal = closeModal;
 }
