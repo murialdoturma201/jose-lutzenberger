@@ -52,7 +52,7 @@ O site está disponível em:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/jose-lutzenberger.git
+git clone https://github.com/murialdoturma201/jose-lutzenberger.git
 ```
 
 2. Abra o arquivo `index.html` em qualquer navegador
